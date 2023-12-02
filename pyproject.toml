@@ -1,6 +1,6 @@
 [project]
-name = "advent-of-code-2023"
-version = "0.0.1"
+name = ""
+version = ""
 description = ""
 authors = [
     {name = "Yifan Wu", email = "tyivanwu@gmail.com"},
@@ -12,10 +12,7 @@ dependencies = [
 ]
 requires-python = ">=3.10"
 license = {text = "MIT"}
-
-[build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+readme = "README.md"
 
 [tool]
 [tool.pdm]
