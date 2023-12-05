@@ -77,13 +77,11 @@ def is_in_range(seed, seeds):
 def res_2():
     seeds, maps = parse()
 
-    new_maps = []
-    for m in maps[::-1]:
-        temp_m = []
-        for dest, source, length in m:
-            temp_m.append((source, dest, length))
-        new_maps.append(temp_m)
+    new_maps = [
+        [(source, dest, length) for dest, source, length in m] for m in maps[::-1]
+    ]
 
+    # maybe use numpy to vectorize this computation
     for min_loc in range(q1()):
         if min_loc % int(1e6) == 0:
             print(f"checkpoint: {min_loc}")
