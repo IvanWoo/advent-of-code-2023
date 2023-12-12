@@ -114,7 +114,7 @@ def q2():
 
     # ray casting algorithm
     # https://en.wikipedia.org/wiki/Point_in_polygon
-    def count_vertical(r, c, maze, grid):
+    def count_horizontal(r, c, maze, grid):
         count = 0
         for k in range(c):
             if grid[r][k] != MAIN_LOOP:
@@ -147,7 +147,7 @@ def q2():
         for c in range(cols):
             if grid[r][c] != ".":
                 continue
-            count = count_vertical(r, c, maze, grid)
+            count = count_horizontal(r, c, maze, grid)
             if count % 2 == 1:
                 grid[r][c] = INSIDE
             else:
