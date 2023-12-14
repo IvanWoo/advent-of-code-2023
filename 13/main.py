@@ -29,7 +29,7 @@ def parse():
 
 
 def is_mirror(m1: np.matrix, m2: np.matrix) -> bool:
-    return np.all(np.flip(m1, axis=0) == m2)
+    return (np.flip(m1, axis=0) == m2).all()
 
 
 def is_smudge(m1: np.matrix, m2: np.matrix) -> bool:
