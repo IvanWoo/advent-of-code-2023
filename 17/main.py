@@ -22,7 +22,7 @@ def parse():
 
 def solve1(matrix):
     rows, cols = len(matrix), len(matrix[0])
-    heap = [(0, 0, 0, i, 1) for i in range(4)]  # (cost, x, y, direction, steps)
+    heap = [(0, 0, 0, 5, 0)]  # (cost, x, y, direction, steps)
     visited = set()
     min_cost = inf
 
@@ -33,12 +33,9 @@ def solve1(matrix):
     while heap:
         cost, x, y, direction, steps = heappop(heap)
 
-        if cost > min_cost:
-            continue
-
         if x == rows - 1 and y == cols - 1:
             min_cost = cost
-            continue
+            break
 
         for i in range(4):
             # ignore reverse direction
@@ -62,7 +59,7 @@ def solve1(matrix):
 
 def solve2(matrix):
     rows, cols = len(matrix), len(matrix[0])
-    heap = [(0, 0, 0, i, 1) for i in range(4)]  # (cost, x, y, direction, steps)
+    heap = [(0, 0, 0, 5, 10)]  # (cost, x, y, direction, steps)
     visited = set()
     min_cost = inf
 
@@ -73,12 +70,9 @@ def solve2(matrix):
     while heap:
         cost, x, y, direction, steps = heappop(heap)
 
-        if cost > min_cost:
-            continue
-
         if x == rows - 1 and y == cols - 1:
             min_cost = cost
-            continue
+            break
 
         for i in range(4):
             # ignore reverse direction
