@@ -1,0 +1,10 @@
+[flake8]
+ignore = 
+    # max line lenght = 120
+    E501,
+    # whitespace before ':' 
+    E203,
+    # testing assert
+    E712,
+    W503
+max-line-length = 120

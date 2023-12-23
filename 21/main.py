@@ -1,8 +1,8 @@
 import fileinput
+from collections import deque
+from copy import deepcopy
 from functools import cache
 from pathlib import Path
-from copy import deepcopy
-from collections import deque
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"

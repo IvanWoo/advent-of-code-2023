@@ -1,7 +1,8 @@
 import fileinput
+from collections import defaultdict, deque
 from functools import cache
 from pathlib import Path
-from collections import defaultdict, deque
+
 import numpy as np
 
 ROOT_DIR = Path(__file__).resolve().parents[0]

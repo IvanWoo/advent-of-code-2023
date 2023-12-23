@@ -1,8 +1,8 @@
 import fileinput
-from functools import cache
 import math
-from pathlib import Path
+from functools import cache
 from itertools import cycle
+from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"

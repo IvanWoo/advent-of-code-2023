@@ -1,10 +1,9 @@
 import fileinput
-from functools import cache
+from functools import cache, reduce
+from math import ceil, floor
 from pathlib import Path
-from functools import reduce
-from math import floor, ceil
 
-from sympy import symbols, solve
+from sympy import solve, symbols
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"

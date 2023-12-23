@@ -1,5 +1,5 @@
-from collections import defaultdict
 import fileinput
+from collections import defaultdict
 from functools import cache
 from pathlib import Path
 

@@ -1,6 +1,7 @@
 import fileinput
 from functools import cache
 from pathlib import Path
+
 import numpy as np
 
 ROOT_DIR = Path(__file__).resolve().parents[0]

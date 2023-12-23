@@ -1,8 +1,8 @@
 import fileinput
 from functools import cache
+from heapq import heappop, heappush
 from math import inf
 from pathlib import Path
-from heapq import heappop, heappush
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"

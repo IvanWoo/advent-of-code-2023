@@ -1,9 +1,9 @@
 import fileinput
-from functools import cache
 import math
-from pathlib import Path
-from collections import deque, defaultdict
+from collections import defaultdict, deque
 from dataclasses import dataclass
+from functools import cache
+from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"
