@@ -2,9 +2,7 @@
 name = ""
 version = ""
 description = ""
-authors = [
-    {name = "Yifan Wu", email = "tyivanwu@gmail.com"},
-]
+authors = [{ name = "Yifan Wu", email = "tyivanwu@gmail.com" }]
 dependencies = [
     "black>=22.10.0",
     "ipython>=8.7.0",
@@ -14,7 +12,7 @@ dependencies = [
     "numpy>=1.26.2",
 ]
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = { text = "MIT" }
 readme = "README.md"
 
 [tool]
@@ -22,3 +20,4 @@ readme = "README.md"
 [tool.pdm.scripts]
 new = "bash scripts/command/new.sh"
 delete = "bash scripts/command/delete.sh"
+test = "bash scripts/command/test.sh"
