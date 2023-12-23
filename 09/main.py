@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
@@ -35,6 +36,7 @@ def get_seqs(row):
     return seqs
 
 
+@cache
 def q1():
     rows = parse()
     ret = 0
@@ -44,6 +46,7 @@ def q1():
     return ret
 
 
+@cache
 def q2():
     rows = parse()
     ret = 0

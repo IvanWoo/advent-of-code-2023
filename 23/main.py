@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from math import inf
 from pathlib import Path
 
@@ -67,6 +68,7 @@ def get_graph(dirs):
     return graph
 
 
+@cache
 def q1():
     dirs = {
         ">": [(0, 1)],
@@ -95,6 +97,7 @@ def q1():
     return dfs(start)
 
 
+@cache
 def q2():
     dirs = {c: [(-1, 0), (1, 0), (0, -1), (0, 1)] for c in "><^v."}
     graph = get_graph(dirs)

@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import Counter, defaultdict
 
@@ -73,6 +74,7 @@ def get_total_winning(counter, rule):
     return ret
 
 
+@cache
 def q1():
     def counter(hands):
         c = Counter(hands)
@@ -83,6 +85,7 @@ def q1():
     return get_total_winning(counter, rule)
 
 
+@cache
 def q2():
     def counter(hands):
         c = Counter(hands)

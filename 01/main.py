@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
@@ -39,10 +40,12 @@ def get_num_2(line: str):
     return head[1] * 10 + tail[1]
 
 
+@cache
 def q1():
     return sum([get_num_1(line) for line in get_input()])
 
 
+@cache
 def q2():
     return sum([get_num_2(line) for line in get_input()])
 

@@ -1,6 +1,6 @@
 import fileinput
-from pathlib import Path
 from functools import cache
+from pathlib import Path
 
 from tqdm import tqdm
 
@@ -44,6 +44,7 @@ def fill(raw, target_pos, bitmask):
 
 
 # brute force
+@cache
 def q1_slow():
     raws, aggs = parse()
     ret = 0
@@ -75,15 +76,18 @@ def ways(s, sizes, curr_count=0) -> int:
     return total_ways
 
 
+@cache
 def q1_fast():
     raws, aggs = parse()
     return sum([ways(tuple(raw + "."), tuple(agg)) for raw, agg in zip(raws, aggs)])
 
 
+@cache
 def q1():
     return q1_fast()
 
 
+@cache
 def q2():
     raws, aggs = parse()
     return sum(

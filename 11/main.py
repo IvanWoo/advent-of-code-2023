@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
@@ -65,10 +66,12 @@ def get_ans(scale: int):
     return ret
 
 
+@cache
 def q1():
     return get_ans(2)
 
 
+@cache
 def q2():
     return get_ans(int(1e6))
 

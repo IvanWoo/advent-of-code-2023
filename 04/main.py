@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import Counter, defaultdict
 
@@ -21,6 +22,7 @@ def parse(line: str):
     return card_id, w, m
 
 
+@cache
 def q1():
     total = 0
     for line in get_input():
@@ -30,6 +32,7 @@ def q1():
     return total
 
 
+@cache
 def q2():
     total = defaultdict(int)
     for line in get_input():

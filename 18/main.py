@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
@@ -47,11 +48,13 @@ def solve(ops):
     return i + b
 
 
+@cache
 def q1():
     ops = parse()
     return solve(ops)
 
 
+@cache
 def q2():
     ops = parse()
     updated_ops = []

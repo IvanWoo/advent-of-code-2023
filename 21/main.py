@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from copy import deepcopy
 from collections import deque
@@ -89,11 +90,13 @@ def fill(sr, sc, steps):
     return fill_fast(sr, sc, steps)
 
 
+@cache
 def q1():
     steps = 64
     return fill(sr, sc, steps)
 
 
+@cache
 def q2():
     assert rows == cols
     size = rows

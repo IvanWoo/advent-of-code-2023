@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import deque
 
@@ -52,6 +53,7 @@ def parse():
     return data
 
 
+@cache
 def q1():
     data = parse()
     workflows, parts = data["expanded_workflows"], data["parts"]
@@ -103,6 +105,7 @@ def update_ranges(ranges: RANGES, category: str, constrain: RANGE) -> RANGES:
     return new_ranges
 
 
+@cache
 def q2():
     data = parse()
     workflows = data["expanded_workflows"]

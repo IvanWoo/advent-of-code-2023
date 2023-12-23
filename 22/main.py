@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import deque
 
@@ -55,6 +56,7 @@ def get_support_maps():
     return support, supported
 
 
+@cache
 def q1():
     bricks = parse()
     support, supported = get_support_maps()
@@ -65,6 +67,7 @@ def q1():
     return total
 
 
+@cache
 def q2():
     bricks = parse()
     support, supported = get_support_maps()

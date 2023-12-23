@@ -15,6 +15,7 @@ DAY_DIR="${PROJECT_DIR}/${DAY}"
 create_main_py() {
     cat >"${DAY_DIR}/main.py" <<EOF
 import fileinput
+from functools import cache
 from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"
@@ -22,8 +23,10 @@ def get_input():
     with fileinput.input(files=(INPUT_FILE)) as f:
         for line in f:
             yield line.strip()
+@cache
 def q1():
     pass
+@cache
 def q2():
     pass
 def main():

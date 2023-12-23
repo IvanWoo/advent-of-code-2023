@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from math import inf
 from pathlib import Path
 from heapq import heappop, heappush
@@ -97,11 +98,13 @@ def solve2(matrix):
     return min_cost
 
 
+@cache
 def q1():
     grid = parse()
     return solve1(grid)
 
 
+@cache
 def q2():
     grid = parse()
     return solve2(grid)

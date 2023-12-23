@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 import math
 from pathlib import Path
 from itertools import cycle
@@ -27,6 +28,7 @@ def parse():
     return instructions, nodes
 
 
+@cache
 def q1():
     instruction, nodes = parse()
     steps = 0
@@ -40,6 +42,7 @@ def q1():
 
 
 # brute force: too slow
+@cache
 def q2_slow():
     instructions, nodes = parse()
     curr_nodes = [node for node in nodes if node.endswith("A")]
@@ -54,6 +57,7 @@ def q2_slow():
     return steps
 
 
+@cache
 def q2():
     instructions, nodes = parse()
     curr_nodes = [node for node in nodes if node.endswith("A")]

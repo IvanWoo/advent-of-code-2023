@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from functools import reduce
 from pathlib import Path
 from collections import defaultdict
@@ -51,10 +52,12 @@ def get_power_sum():
     return ret
 
 
+@cache
 def q1():
     return get_id_sum()
 
 
+@cache
 def q2():
     return get_power_sum()
 

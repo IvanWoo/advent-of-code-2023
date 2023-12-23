@@ -1,5 +1,6 @@
 from collections import defaultdict
 import fileinput
+from functools import cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
@@ -24,6 +25,7 @@ NEIGHBORS = [
 ]
 
 
+@cache
 def q1():
     ret = 0
     inputs = list(get_input())
@@ -49,6 +51,7 @@ def q1():
     return ret
 
 
+@cache
 def q2():
     gear_counter = defaultdict(list)
     inputs = list(get_input())

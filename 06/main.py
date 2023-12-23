@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from functools import reduce
 from math import floor, ceil
@@ -36,6 +37,7 @@ def parse_2():
     return vals
 
 
+@cache
 def q1():
     times, distances = parse_1()
     n = len(times)
@@ -66,6 +68,7 @@ def _q2_fast():
     return min(time, solutions[1]) - solutions[0] + 1
 
 
+@cache
 def q2(fast=True):
     return _q2_fast() if fast else _q2()
 

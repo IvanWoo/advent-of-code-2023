@@ -1,8 +1,8 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import defaultdict, deque
 import numpy as np
-from functools import cache
 
 ROOT_DIR = Path(__file__).resolve().parents[0]
 INPUT_FILE = ROOT_DIR / "input.txt"
@@ -93,10 +93,12 @@ def get_total(start_pos, start_dir):
     return len(visited.keys())
 
 
+@cache
 def q1():
     return get_total((0, 0), RIGHT)
 
 
+@cache
 def q2():
     grid = parse()
     rows, cols = len(grid), len(grid[0])

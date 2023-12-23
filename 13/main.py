@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from typing import Callable
 
@@ -47,6 +48,7 @@ def summarize(m, scale, condition_func: Callable[[np.matrix, np.matrix], bool]):
     return ret
 
 
+@cache
 def q1():
     ret = 0
     matrixes = parse()
@@ -58,6 +60,7 @@ def q1():
     return ret
 
 
+@cache
 def q2():
     ret = 0
     matrixes = parse()

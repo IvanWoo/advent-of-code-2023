@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 import math
 from pathlib import Path
 from collections import deque, defaultdict
@@ -53,6 +54,7 @@ def pprint(start, pulse, end):
     print(f"{start} -{'low' if pulse == 0 else 'high'}-> {end}")
 
 
+@cache
 def q1():
     modules = parse()
     # print(modules)
@@ -96,6 +98,7 @@ def q1():
     return pulse_count[0] * pulse_count[1]
 
 
+@cache
 def q2():
     modules = parse()
     # print(modules)

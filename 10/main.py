@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import defaultdict
 
@@ -73,6 +74,7 @@ def pprint(grid):
     print()
 
 
+@cache
 def q1():
     maze, starting, connections = parse()
     rows, cols = len(maze), len(maze[0])
@@ -107,6 +109,7 @@ def identify_staring_pipe(starting, connections):
     return pipe
 
 
+@cache
 def q2():
     MAIN_LOOP = "="
     INSIDE = "I"

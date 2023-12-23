@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 from collections import defaultdict
 
@@ -33,11 +34,13 @@ def _sum(d: dict):
     return ret
 
 
+@cache
 def q1():
     sequence = parse()
     return sum([_hash(s) for s in sequence])
 
 
+@cache
 def q2():
     sequence = parse()
     hashmap = defaultdict(dict)

@@ -1,4 +1,5 @@
 import fileinput
+from functools import cache
 from pathlib import Path
 import numpy as np
 
@@ -74,12 +75,14 @@ def get_total_loads(mat):
     return sum(rocks * loads)
 
 
+@cache
 def q1():
     mat = parse()
     tilted_mat = tilt_north(mat)
     return get_total_loads(tilted_mat)
 
 
+@cache
 def q2():
     mat = parse()
 
