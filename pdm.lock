@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4.1"
-content_hash = "sha256:c327a6dc7ba14b17b1b934d2820b70872b03538ffc3811da22d7691e2d1efc68"
+content_hash = "sha256:5817788b72032ad8c3aa9781bc62da12f90c8b01b9e0a302def30096bdeea1d0"
 
 [[package]]
 name = "asttokens"
@@ -129,6 +129,16 @@ files = [
 ]
 
 [[package]]
+name = "graphviz"
+version = "0.20.1"
+requires_python = ">=3.7"
+summary = "Simple Python interface for Graphviz"
+files = [
+    {file = "graphviz-0.20.1-py3-none-any.whl", hash = "sha256:587c58a223b51611c0cf461132da386edd896a029524ca61a1462b880bf97977"},
+    {file = "graphviz-0.20.1.zip", hash = "sha256:8c58f14adaa3b947daf26c19bc1e98c4e0702cdc31cf99153e6f06904d492bf8"},
+]
+
+[[package]]
 name = "identify"
 version = "2.5.33"
 requires_python = ">=3.8"
@@ -203,6 +213,16 @@ summary = "Type system extensions for programs checked with the mypy type checke
 files = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
     {file = "mypy_extensions-1.0.0.tar.gz", hash = "sha256:75dbf8955dc00442a438fc4d0666508a9a97b6bd41aa2f0ffe9d2f2725af0782"},
+]
+
+[[package]]
+name = "networkx"
+version = "3.2.1"
+requires_python = ">=3.9"
+summary = "Python package for creating and manipulating graphs and networks"
+files = [
+    {file = "networkx-3.2.1-py3-none-any.whl", hash = "sha256:f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2"},
+    {file = "networkx-3.2.1.tar.gz", hash = "sha256:9f1bb5cf3409bf324e0a722c20bdb4c20ee39bf1c30ce8ae499c8502b0b5e0c6"},
 ]
 
 [[package]]
